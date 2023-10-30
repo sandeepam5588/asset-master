@@ -1,0 +1,40 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /asset-master
+
+spring:
+  mail:
+    protocol: smtp
+    host: smtp.gmail.com
+    port: 587
+    username: <sender email id goes here>
+    password: <app password for the sender email id goes here>
+    properties:
+      mail:
+        debug: true
+        smtp:
+          socketFactory:
+            port: 587
+            class: javax.net.ssl.SSLSocketFactory
+          auth: true
+          starttls:
+            enable: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      naming:
+#        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/asset_master_db
+    username: asset_master
+    password: asset_master123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
