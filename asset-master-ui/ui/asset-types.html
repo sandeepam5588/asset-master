@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Asset Tracking | Assets</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo-box">
+        <h1 class="header__logo">Smart Asset Management</h1>
+      </div>
+      <div class="header__nav-container">
+        <a href="/" class="header__nav-link">Home</a>
+        <a href="/assets.html" class="header__nav-link">Assets</a>
+        <a href="/asset-types.html" class="header__nav-link">Asset Types</a>
+        <a href="/locations.html" class="header__nav-link">Locations</a>
+        <a href="#" class="header__nav-link" id="logout-btn">Logout</a>
+      </div>
+    </header>
+    <main class="main">
+      <div class="section-asset-types">
+        <div class="assets__action-button-container">
+          <a class="assets__button-add" href="#add-asset-type"
+            >Add Asset Type</a
+          >
+        </div>
+
+        <div class="asset-types__container" id="asset-type-card-container">
+          <!-- <div class="asset-types__card">
+            <img
+              src="/assets/img/360_F_385956366_Zih7xDcSLqDxiJRYUfG5ZHNoFCSLMRjm.jpg"
+              alt="Asset Type Image"
+              class="asset-types__image"
+            />
+
+            <div class="asset-types__description-box">
+              <h2 class="asset-types__name">CPU</h2>
+              <p class="asset-types__id">#892CJ9</p>
+            </div>
+          </div>
+
+          <div class="asset-types__card">
+            <img
+              src="/assets/img/360_F_385956366_Zih7xDcSLqDxiJRYUfG5ZHNoFCSLMRjm.jpg"
+              alt="Asset Type Image"
+              class="asset-types__image"
+            />
+
+            <div class="asset-types__description-box">
+              <h2 class="asset-types__name">CPU</h2>
+              <p class="asset-types__id">#892CJ9</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </main>
+
+    <div class="add-asset-type__popup" id="add-asset-type">
+      <div class="add-asset-type__backdrop">
+        <div class="add-asset-type__container">
+          <a href="/asset-types.html" class="add-asset-type__popup-close-btn"
+            >X</a
+          >
+          <h2 class="add-asset-type__heading">Add Asset Type</h2>
+          <form
+            action="#"
+            class="add-asset-type__form"
+            id="add-asset-type-form"
+          >
+            <div class="add-asset-type__input-container">
+              <label for="asset-type-name" class="add-asset-type__label"
+                >Asset Type Name</label
+              >
+              <input
+                type="text"
+                class="add-asset-type__input"
+                id="asset-type-name"
+                required
+              />
+            </div>
+
+            <button class="add-asset-type__submit-btn">
+              Submit Asset Type Name
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/logout.js"></script>
+    <script src="./assets/js/asset-types.js"></script>
+  </body>
+</html>

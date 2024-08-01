@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Asset Tracking | Assets</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo-box">
+        <h1 class="header__logo">Smart Asset Management</h1>
+      </div>
+      <div class="header__nav-container">
+        <a href="/" class="header__nav-link">Home</a>
+        <a href="/assets.html" class="header__nav-link">Assets</a>
+        <a href="/asset-types.html" class="header__nav-link">Asset Types</a>
+        <a href="/locations.html" class="header__nav-link">Locations</a>
+        <a href="#" class="header__nav-link" id="logout-btn">Logout</a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="view-asset__container">
+        <div class="view-asset__details-card details-card">
+          <h2 class="details-card__heading">Asset Details</h2>
+
+          <div class="details-card__row">
+            <div class="details-card__cell details-card__cell--label">
+              Asset Name
+            </div>
+            <div class="details-card__cell" id="details-asset-name">
+              RTX 4090
+            </div>
+          </div>
+
+          <div class="details-card__row">
+            <div class="details-card__cell details-card__cell--label">
+              Description
+            </div>
+            <div class="details-card__cell" id="details-asset-description">
+              This is the description
+            </div>
+          </div>
+
+          <div class="details-card__row">
+            <div class="details-card__cell details-card__cell--label">
+              Asset Type
+            </div>
+            <div class="details-card__cell" id="details-asset-type">GPU</div>
+          </div>
+
+          <div class="details-card__row">
+            <div class="details-card__cell details-card__cell--label">
+              Transaction Date
+            </div>
+            <div class="details-card__cell" id="details-asset-date">
+              2023-10-13T00:00:00
+            </div>
+          </div>
+
+          <!-- <div class="details-card__row">
+            <div class="details-card__cell details-card__cell--label">
+              From Location
+            </div>
+            <div class="details-card__cell" id="details-asset-from-location">
+              Block_AB-1
+            </div>
+          </div> -->
+
+          <div class="details-card__row">
+            <div class="details-card__cell details-card__cell--label">
+              Location
+            </div>
+            <div class="details-card__cell" id="details-asset-to-location">
+              Block_AB-2
+            </div>
+          </div>
+
+          <div class="details-card__row">
+            <div class="details-card__cell details-card__cell--label">
+              Status
+            </div>
+            <div class="details-card__cell" id="details-asset-status">
+              NEW_STOCK
+            </div>
+          </div>
+
+          <div class="details-card__row">
+            <div class="details-card__cell details-card__cell--label">
+              User Name
+            </div>
+            <div class="details-card__cell" id="details-asset-username">
+              Sandeep
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="asset-history">
+        <h2 class="asset-history__heading">Asset History</h2>
+
+        <div class="asset-history__list" id="asset-history-list">
+          <div class="asset-history__row asset-history__row--heading">
+            <div class="asset-history__cell">From</div>
+
+            <div class="asset-history__cell">To</div>
+
+            <div class="asset-history__cell">Date</div>
+
+            <div class="asset-history__cell">Status</div>
+          </div>
+
+          <!-- <div class="asset-history__row">
+            <div class="asset-history__cell">Block_AB-1</div>
+
+            <div class="asset-history__cell">Block_AB-2</div>
+
+            <div class="asset-history__cell">2023-10-13</div>
+
+            <div class="asset-history__cell">NEW_STOCK</div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <!-- "transactionID": 56,
+        "assetName": "RTX 4090",
+        "assetType": "GPU",
+        "transactionDate": "2023-10-13T00:00:00",
+        "fromLocationName": null,
+        "toLocationName": "A_BLOCK",
+        "updateStatus": "NEW_STOCK",
+        "description": "new asset",
+        "userName": "Sandeep" -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/logout.js"></script>
+    <script src="./assets/js/view-asset.js"></script>
+  </body>
+</html>

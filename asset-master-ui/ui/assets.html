@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Asset Tracking | Assets</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo-box">
+        <h1 class="header__logo">Smart Asset Management</h1>
+      </div>
+      <div class="header__nav-container">
+        <a href="/" class="header__nav-link">Home</a>
+        <a href="/assets.html" class="header__nav-link">Assets</a>
+        <a href="/asset-types.html" class="header__nav-link">Asset Types</a>
+        <a href="/locations.html" class="header__nav-link">Locations</a>
+        <a href="#" class="header__nav-link" id="logout-btn">Logout</a>
+      </div>
+    </header>
+    <main class="main">
+      <div class="section-assets-list">
+        <div class="assets__action-button-container">
+          <a class="assets__button-add" href="#add-asset">Add Asset</a>
+        </div>
+
+        <div class="asset-list" id="asset-list">
+          <div class="asset-list__row asset-list__row-header">
+            <div class="asset-list__row-cell">Asset Name</div>
+
+            <div class="asset-list__row-cell">Status</div>
+
+            <div class="asset-list__row-cell">Asset Type</div>
+
+            <div class="asset-list__row-cell">Location</div>
+
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              &nbsp;
+            </div>
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              &nbsp;
+            </div>
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              &nbsp;
+            </div>
+          </div>
+
+          <!-- <div class="asset-list__row">
+            <div class="asset-list__row-cell">Asset Name</div>
+
+            <div class="asset-list__row-cell">Status</div>
+
+            <div class="asset-list__row-cell">Asset Type</div>
+
+            <div class="asset-list__row-cell">Location</div>
+
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              <button class="asset-list__button">Update</button>
+            </div>
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              <button class="asset-list__button">Delete</button>
+            </div>
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              <button class="asset-list__button">View</button>
+            </div>
+          </div>
+
+          <div class="asset-list__row">
+            <div class="asset-list__row-cell">Asset Name</div>
+
+            <div class="asset-list__row-cell">Status</div>
+
+            <div class="asset-list__row-cell">Asset Type</div>
+
+            <div class="asset-list__row-cell">Location</div>
+
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              <button class="asset-list__button">Update</button>
+            </div>
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              <button class="asset-list__button">Delete</button>
+            </div>
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              <button class="asset-list__button">View</button>
+            </div>
+          </div>
+
+          <div class="asset-list__row">
+            <div class="asset-list__row-cell">Asset Name</div>
+
+            <div class="asset-list__row-cell">Status</div>
+
+            <div class="asset-list__row-cell">Asset Type</div>
+
+            <div class="asset-list__row-cell">Location</div>
+
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              <button class="asset-list__button">Update</button>
+            </div>
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              <button class="asset-list__button">Delete</button>
+            </div>
+            <div
+              class="asset-list__row-cell asset-list__row-cell--button-container"
+            >
+              <button class="asset-list__button">View</button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </main>
+
+    <div class="add-asset-type__popup" id="add-asset">
+      <div class="add-asset-type__backdrop">
+        <div class="add-asset-type__container">
+          <a href="/assets.html" class="add-asset-type__popup-close-btn">X</a>
+          <h2 class="add-asset-type__heading">Add Asset</h2>
+          <form action="#" class="add-asset-type__form" id="add-new-asset-form">
+            <div class="add-asset-type__input-container">
+              <label for="asset-name" class="add-asset-type__label"
+                >Asset Name</label
+              >
+              <input
+                type="text"
+                class="add-asset-type__input"
+                id="asset-name"
+                required
+              />
+            </div>
+
+            <div class="add-asset-type__input-container">
+              <label for="asset-description" class="add-asset-type__label"
+                >Asset Description</label
+              >
+              <input
+                type="text"
+                class="add-asset-type__input"
+                id="asset-description"
+                required
+              />
+            </div>
+
+            <div class="add-asset-type__input-container">
+              <label for="asset-status-dropdown" class="add-asset-type__label"
+                >Status</label
+              >
+              <!-- <input type="text" class="add-asset-type__input" required /> -->
+              <select class="add-asset-type__input" id="asset-status-dropdown">
+                <option value="NEW STOCK">New Stock</option>
+                <option value="REPAIRED">Repaired</option>
+                <option value="SHELVED">Shelved</option>
+              </select>
+            </div>
+
+            <div class="add-asset-type__input-container">
+              <label for="asset-type-dropdown" class="add-asset-type__label"
+                >Asset Type</label
+              >
+              <!-- <input type="text" class="add-asset-type__input" required /> -->
+              <select
+                class="add-asset-type__input"
+                id="asset-type-dropdown"
+              ></select>
+            </div>
+
+            <div class="add-asset-type__input-container">
+              <label for="asset-location-dropdown" class="add-asset-type__label"
+                >Location</label
+              >
+              <!-- <input type="text" class="add-asset-type__input" required /> -->
+              <select
+                class="add-asset-type__input"
+                id="asset-location-dropdown"
+              ></select>
+            </div>
+
+            <button class="add-asset-type__submit-btn">Submit New Asset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="update-asset-type__popup update-asset-type__popup--hidden"
+      id="update-asset-popup"
+    >
+      <div class="update-asset-type__backdrop">
+        <div class="update-asset-type__container">
+          <a
+            href="/assets.html"
+            class="update-asset-type__popup-close-btn"
+            id="update-asset-close-btn"
+            >X</a
+          >
+          <h2 class="update-asset-type__heading">Update Asset</h2>
+          <form
+            action="#"
+            class="update-asset-type__form"
+            id="update-asset-form"
+          >
+            <div class="update-asset-type__input-container">
+              <label for="update-asset-name" class="update-asset-type__label"
+                >Asset Name</label
+              >
+              <input
+                type="text"
+                class="update-asset-type__input"
+                id="update-asset-name"
+                required
+              />
+            </div>
+
+            <div class="update-asset-type__input-container">
+              <label
+                for="update-asset-description"
+                class="update-asset-type__label"
+                >Asset Description</label
+              >
+              <input
+                type="text"
+                class="update-asset-type__input"
+                id="update-asset-description"
+                required
+              />
+            </div>
+
+            <div class="update-asset-type__input-container">
+              <label
+                for="update-asset-status-dropdown"
+                class="update-asset-type__label"
+                >Status</label
+              >
+              <!-- <input type="text" class="update-asset-type__input" required /> -->
+              <select
+                class="update-asset-type__input"
+                id="update-asset-status-dropdown"
+              >
+                <option value="NEW STOCK">New Stock</option>
+                <option value="REPAIRED">Repaired</option>
+                <option value="SHELVED">Shelved</option>
+              </select>
+            </div>
+
+            <div class="update-asset-type__input-container">
+              <label
+                for="update-asset-type-dropdown"
+                class="update-asset-type__label"
+                >Asset Type</label
+              >
+              <!-- <input type="text" class="update-asset-type__input" required /> -->
+              <select
+                class="update-asset-type__input"
+                id="update-asset-type-dropdown"
+              ></select>
+            </div>
+
+            <div class="update-asset-type__input-container">
+              <label
+                for="update-asset-location-dropdown"
+                class="update-asset-type__label"
+                >Location</label
+              >
+              <!-- <input type="text" class="update-asset-type__input" required /> -->
+              <select
+                class="update-asset-type__input"
+                id="update-asset-location-dropdown"
+              ></select>
+            </div>
+
+            <button class="update-asset-type__submit-btn">update Asset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/logout.js"></script>
+    <script src="./assets/js/assets.js"></script>
+  </body>
+</html>

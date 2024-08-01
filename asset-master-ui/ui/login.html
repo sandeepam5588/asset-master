@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Asset Tracking</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo-box">
+        <h1 class="header__logo">Smart Asset Management</h1>
+      </div>
+      <div class="header__nav-container">
+        <a href="/signup.html" class="header__nav-link">Signup</a>
+      </div>
+    </header>
+
+    <section class="section-authenticate">
+      <div class="form__container">
+        <h2 class="form__heading">Login to Smart Asset Manager</h2>
+        <form action="#" class="form__form" id="login-form">
+          <div class="form__input-group">
+            <label class="form__input-label" for="email">Email</label>
+            <input class="form__input" type="text" id="email" required />
+          </div>
+
+          <div class="form__input-group">
+            <label class="form__input-label" for="password">Password</label>
+            <input class="form__input" type="password" id="password" required />
+          </div>
+
+          <button type="submit" class="button button--cta" id="submit-btn">
+            Login
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/login.js"></script>
+  </body>
+</html>
